@@ -27,7 +27,7 @@
                     field: fieldsGR.column_label.getDisplayValue(),
                     user1Value: user1Value,
                     user2Value: user2Value
-                }); //stroing different value between two user in differences array
+                }); //storing different value between two user in differences array
             }
         }
     }
