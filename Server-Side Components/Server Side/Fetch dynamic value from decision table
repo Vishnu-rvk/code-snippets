@@ -1,8 +1,8 @@
 (function calculatedFieldValue(current) {
 
-    var fieldA = current.u_list_items.toString();
+    var fieldA = current.u_list_items.toString(); // Get value of field 1
 
-    if (fieldA != '') {
+    if (fieldA != '') { // Check if field value is empty
 
         var individualInformation = fieldA.split(",");
         var resultElements = [];
@@ -11,7 +11,7 @@
                 var inputs = {};
                 inputs['u_decision_field'] = individualInformation[i];
 
-                var dt = new sn_dt.DecisionTableAPI();
+                var dt = new sn_dt.DecisionTableAPI(); // Calling decision table by API call
                 var response = dt.getDecision('sysid_of_decision_table', inputs);
 
                 var result_elements = response.result_elements;
@@ -25,7 +25,7 @@
             }
 
         }
-        return resultElements.toString();
+        return resultElements.toString(); // Return end result as string to get stored in field 2
 
     }
 })(current);
